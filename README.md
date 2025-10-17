@@ -5,7 +5,6 @@ This is a simple **login page** for TataSTRIVE where users can log in using thei
 The project is built using **HTML, CSS, and JavaScript** and is responsive for desktop and mobile screens.
 
 ---
-
 ## Features
 
 - Login with **Username** and **Phone Number**  
@@ -30,8 +29,6 @@ The project is built using **HTML, CSS, and JavaScript** and is responsive for d
   1. Push your project to a GitHub repository.  
   2. Go to **Settings → Pages → Build from main branch**.  
 
-
-
 ---
 
 ## Tech Stack
@@ -41,8 +38,6 @@ The project is built using **HTML, CSS, and JavaScript** and is responsive for d
 - **JavaScript**
 
 ---
-
-
 
 ## Author
 
