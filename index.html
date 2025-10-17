@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TataSTRIVE Login</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .login-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 350px;
+    text-align: center;
+  }
+  h1 {
+    color: #023e8a;
+    margin-bottom: 10px;
+  }
+  input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .btn:hover {
+    background-color: #023e8a;
+  }
+</style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Welcome to TATASTRIVE</h1>
+    <p>Login with your phone number & course</p>
+
+    <form id="loginForm">
+	<input type="text" id="username" name="username" placeholder="Enter Username" required>
+      <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required pattern="[0-9]{10}">
+      <select id="course" name="course" required>
+        <option value="">Select Course</option>
+        <option value="java">Java Full Stack Developer</option>
+        <option value="cybersecurity">Cyber Security</option>
+        <option value="aws">AWS</option>
+      </select>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const phone = document.getElementById('phone').value.trim();
+      const course = document.getElementById('course').value;
+
+      if(phone === '' || course === '') {
+        alert('Please enter phone number and select a course!');
+        return;
+      }
+
+      alert('Welcome! You are logging in for the course: ' + course);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
